@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #ifndef FUNCCC_H
 #define FUNCCC_H
 #include <iostream>
@@ -21,6 +22,8 @@ void redimensionar(char*& arreglo, int& capacidad, int nuevaCapacidad, int conta
 
 #endif // FUNCCC_H
 =======
+=======
+>>>>>>> 517da88 (Actualizacion)
 #ifndef FUNCCC_H
 #define FUNCCC_H
 #include <iostream>
@@ -138,4 +141,7 @@ void RotarBits(char *CadenaComprimida, unsigned int contador, unsigned int Canti
 
 }
 #endif // FUNCCC_H
+<<<<<<< HEAD
 >>>>>>> 1de2b70 (Repositorio practica 3 informatica II)
+=======
+>>>>>>> 517da88 (Actualizacion)

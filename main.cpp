@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include <iostream>
 #include "FuncCC.h"
 using namespace std;
@@ -25,6 +26,8 @@ int main() {
     return 0;
 }
 =======
+=======
+>>>>>>> 517da88 (Actualizacion)
 #include <iostream>
 #include <fstream>
 #include <istream>
@@ -110,4 +113,7 @@ RotarBits(CadenaComprimida, NuevoContador, CantidadDeRotaciones);
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 1de2b70 (Repositorio practica 3 informatica II)
+=======
+>>>>>>> 517da88 (Actualizacion)
