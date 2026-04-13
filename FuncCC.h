@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-#ifndef FUNCCC_H
-#define FUNCCC_H
-#include <iostream>
-using namespace std;
-// Función para redimensionar el arreglo
-void redimensionar(char*& arreglo, int& capacidad, int nuevaCapacidad, int contador) {
-    char* pArregloCopia = new char[nuevaCapacidad];
-    
-    // Copiar elementos existentes
-    for (int i = 0; i < contador; i++) {
-        pArregloCopia[i] = arreglo[i];
-    }
-    delete[] arreglo;
-    arreglo = pArregloCopia;
-    capacidad = nuevaCapacidad;
-}
-
-
-
-
-#endif // FUNCCC_H
-=======
-=======
->>>>>>> 517da88 (Actualizacion)
 #ifndef FUNCCC_H
 #define FUNCCC_H
 #include <iostream>
@@ -43,7 +17,7 @@ void redimensionar(char*& arreglo,unsigned int& capacidad,unsigned int nuevaCapa
 }
 
 
-void ImprimirCadena(char *CadenaComprimida, char *CaracRepetidos,unsigned short NuevoContador){
+void ImprimirCadenaRLE(char *CadenaComprimida, char *CaracRepetidos,unsigned short NuevoContador){
 for  (int i=0; i<NuevoContador; i++){
     cout << CadenaComprimida[i]<<int(CaracRepetidos[i]);
 }}
@@ -141,7 +115,3 @@ void RotarBits(char *CadenaComprimida, unsigned int contador, unsigned int Canti
 
 }
 #endif // FUNCCC_H
-<<<<<<< HEAD
->>>>>>> 1de2b70 (Repositorio practica 3 informatica II)
-=======
->>>>>>> 517da88 (Actualizacion)
