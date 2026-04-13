@@ -1,6 +1,5 @@
 #include <iostream>
 #include <fstream>
-#include <istream>
 #include "FuncCC.h"
 using namespace std;
 unsigned int Capacidad=0;
@@ -11,20 +10,20 @@ unsigned int Capacidad=0;
     char*CaracRepetidos = nullptr;
 
 int main() {
-//std::ifstream archivo("C:\\Users\\ojeda\\Desktop\\XD.txt");
-   // if (archivo.is_open()) {
-   //     leerTexto(Cadena, contador, Capacidad, archivo);
-for (int i=0; i<contador; i++){
+std::ifstream archivo("XD.txt");                                    //leer un archivo de texto, se utiliza la clase ifstream para abrir el archivo y se pasa como argumento a la funcion leerTexto, el archivo debe estar en la misma carpeta que el programa o se debe especificar la ruta completa del archivo
+    if (archivo.is_open()) {
+        leerTexto(Cadena, contador, Capacidad, archivo);
+/*for (int i=0; i<contador; i++){
     cout<<Cadena[i];
+    }*/
+        archivo.close();
+        delete[] Cadena;//libero memoria del arreglo original ya que no se necesita mas
+    } else {
+        cout << "No se pudo abrir el archivo." << endl;
     }
-   //     archivo.close();
- //       delete[] Cadena;
- //   } else {
- //       cout << "No se pudo abrir el archivo." << endl;
- //   }
-   leerTexto(Cadena,contador,Capacidad,cin);                                                //funcion que lee bien sea un texto de entrada o un archivo .txt, el texto se almacena en un arreglo dinamico que se redimensiona segun sea necesario, el contador se utiliza para llevar un registro de la cantidad de caracteres ingresados y la capacidad se utiliza para determinar cuándo es necesario redimensionar el arreglo
+//    leerTexto(Cadena,contador,Capacidad,cin);                                                //funcion que lee bien sea un texto de entrada o un archivo .txt, el texto se almacena en un arreglo dinamico que se redimensiona segun sea necesario, el contador se utiliza para llevar un registro de la cantidad de caracteres ingresados y la capacidad se utiliza para determinar cuándo es necesario redimensionar el arreglo
     comprimirRLE(Cadena,contador,CadenaComprimida,CaracRepetidos,NuevoContador,Capacidad);  //Funcion que comprime la cadena utilizando el algoritmo RLE, se recorre el arreglo de caracteres y se cuenta cuantas veces se repite cada caracter, se almacena el caracter comprimido en un nuevo arreglo y la cantidad de repeticiones en otro arreglo, ambos arreglos se redimensionan segun sea necesario, el nuevo contado se utiliza para llevar un registro de la cantidad de caracteres comprimidos y la capacidad se utiliza para determinar cuando sea necesario redimencionar los arreglos
-    delete[] Cadena;//libero memoria del arreglo original ya que no se necesita mas
+//    delete[] Cadena;//libero memoria del arreglo original ya que no se necesita mas
     ImprimirCadenaRLE(CadenaComprimida, CaracRepetidos, NuevoContador);                        //funcion que imprime la cadena comprimida, se recorre el arreglo de caracteres cmprimidos y se imprime cada caracter seguido de la cantidad de repeticiones, se utiliza el nuevo contador para determinar la cantidad de caracteres comprimidos a imprimir
   //  descomprimirRLE(CadenaComprimida, CaracRepetidos);                                      //funcion qque descomprime la cadena comprimida, se recorre el arreglo de caracteres comprimidos y se imprime cada caracter repetido la cantidad de veces indicada en el arreglo de repeticiones
     int CantidadDeRotaciones;                                                                //variable para almacenar la cantidad de rotaciones que el usuario desea realizar en los bits de los caracteres comprimidos 

@@ -1,7 +1,7 @@
 #ifndef FUNCCC_H
 #define FUNCCC_H
 #include <iostream>
-#include <istream>
+#include <fstream>
 using namespace std;
 // Función para redimensionar el arreglo
 void redimensionar(char*& arreglo,unsigned int& capacidad,unsigned int nuevaCapacidad,unsigned int contador) {
@@ -23,7 +23,7 @@ for  (int i=0; i<NuevoContador; i++){
 }}
 
 
-void leerTexto(char*& Cadena, unsigned int& contador,unsigned int& capacidad,istream& entrada, const char* mensaje = "Ingresa texto (Enter para terminar): ") {
+void leerTexto(char*& Cadena, unsigned int& contador,unsigned int& capacidad,ifstream& entrada, const char* mensaje = "Ingresa texto (Enter para terminar): ") {
     if (capacidad == 0) capacidad = 1;
     Cadena = new char[capacidad];
     contador = 0;
@@ -38,9 +38,9 @@ void leerTexto(char*& Cadena, unsigned int& contador,unsigned int& capacidad,ist
     }
     
     // Agregar el caracter nulo al final
-  /*  if (contador >= capacidad) {
+    if (contador >= capacidad) {
         redimensionar(Cadena, capacidad, capacidad + 1, contador);
-    } */
+    } 
     Cadena[contador] = '\0';
 }
 
