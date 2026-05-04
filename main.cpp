@@ -2,17 +2,8 @@
 #include <fstream>
 #include "FuncCC.h"
 using namespace std;
-    char* Cadena = nullptr;                                        //un arreglo dinamico para almacenar los caracteres incluyendo los espacios, el arreglo se redimensionará según sea necesario
-    char*CadenaComprimida = nullptr;                                //arreglo donde almacenare la nueva cadena comrpimida, se redimencionara segun sea necesario
-    char*CaracRepetidos = nullptr;
 int main() {
-std::ifstream archivo("XD.txt");                                    //leer un archivo de texto, se utiliza la clase ifstream para abrir el archivo y se pasa como argumento a la funcion leerTexto, el archivo debe estar en la misma carpeta que el programa o se debe especificar la ruta completa del archivo
-    if (archivo.is_open()) {
-        ArregloString(Cadena, archivo);
-        archivo.close();
-    } else {
-        cout << "No se pudo abrir el archivo." << endl;
-    }
+/*istream& entrada
 //    ArregloString(Cadena, cin);                                                //funcion que lee bien sea un texto de entrada o un archivo .txt, el texto se almacena en un arreglo dinamico que se redimensiona segun sea necesario, el contador se utiliza para llevar un registro de la cantidad de caracteres ingresados y la capacidad se utiliza para determinar cuándo es necesario redimensionar el arreglo
     comprimirRLE(Cadena,CadenaComprimida,CaracRepetidos);  //Funcion que comprime la cadena utilizando el algoritmo RLE, se recorre el arreglo de caracteres y se cuenta cuantas veces se repite cada caracter, se almacena el caracter comprimido en un nuevo arreglo y la cantidad de repeticiones en otro arreglo, ambos arreglos se redimensionan segun sea necesario, el nuevo contado se utiliza para llevar un registro de la cantidad de caracteres comprimidos y la capacidad se utiliza para determinar cuando sea necesario redimencionar los arreglos
     delete[] Cadena;//libero memoria del arreglo original ya que no se necesita mas
@@ -27,27 +18,19 @@ std::ifstream archivo("XD.txt");                                    //leer un ar
     } while (CantidadDeRotaciones>7);                                                  //condion para validar que el numero ingresado sea menor a 8
 RotarBits(CadenaComprimida, CantidadDeRotaciones);                      //funcion que rota los bits de cada caracter comprimido, se recorre el arreglo de cada caracter comprimido y se realiza la rotacion de bits segun la cantidad de rotaciones indicada por el usuario, se utiliza el nuevo contador para determinar la cantidad de caracteres comprimidos a rotar
 
+*/
 
 
 
 
+ifstream archivo("XD.txt");
+char** matriz=crearMatriz(archivo);
+for (int i=0; matriz[i][0]!='\0';i++){
+for (int j=0; matriz[i][j]!='\0';j++){
+    cout<<matriz[i][j];
+}
 
-
-
-    delete[] CadenaComprimida;
-    delete[] CaracRepetidos;//libero memoria */
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 
